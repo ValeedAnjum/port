@@ -16,6 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <meta
+        name="google-site-verification"
+        content="UmQ85SFq4H3Bs0OgntXkMbvmCR12Rm7yyg6ZejOUXg0"
+      />
       <body className={`${albertSans.variable}`}>
         <MuiThemeProvider>{children}</MuiThemeProvider>
       </body>
