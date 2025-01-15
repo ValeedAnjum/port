@@ -45,7 +45,7 @@ const AboutCard = ({
 };
 export const AboutMeSec = () => {
   return (
-    <Grid container justifyContent="center">
+    <Grid container justifyContent="center" id="about-sec" sx={{ mb: "20rem" }}>
       <Grid item sm={9} sx={{ m: 1, p: 2 }} container>
         <Grid item sm={6} sx={{ p: "2rem 2rem 0 0" }}>
           <Box

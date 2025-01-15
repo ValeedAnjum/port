@@ -5,6 +5,10 @@ import Toolbar from "@mui/material/Toolbar";
 import { Button, Stack, Typography } from "@mui/material";
 
 export default function Navbar() {
+  const goToAbout = () => {
+    const aboutSection = document.getElementById("about-sec");
+    aboutSection?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <Box sx={{ flexGrow: 1, m: 1 }}>
       <AppBar
@@ -30,7 +34,7 @@ export default function Navbar() {
               pl: 2,
             }}
           >
-            <Button variant="main" disableRipple>
+            <Button variant="main" disableRipple onClick={goToAbout}>
               About Me
             </Button>
             <Button variant="main" disableRipple>
