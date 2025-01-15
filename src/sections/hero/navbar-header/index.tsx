@@ -16,7 +16,7 @@ const IconWithText = ({ icon: Icon, text, ...rest }: IconTextProps) => {
       {...rest}
       direction="row"
       sx={{
-        color: "#1F1F1F",
+        color: "text.primary",
         textDecoration: "none",
         display: "flex",
         alignItems: "center",
@@ -25,7 +25,7 @@ const IconWithText = ({ icon: Icon, text, ...rest }: IconTextProps) => {
       <Icon />
       <Typography
         sx={{
-          fontSize: "14px",
+          fontSize: "0.875rem",
           fontWeight: "600",
           ml: "0.5rem",
         }}

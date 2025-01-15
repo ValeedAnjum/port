@@ -23,13 +23,13 @@ const AboutCard = ({
           borderRadius: "4px",
         }}
       >
-        <Icon sx={{ width: "100%", height: "100%", color: "#5044EB" }} />
+        <Icon sx={{ width: "100%", height: "100%", color: "primary.main" }} />
       </Stack>
       <Stack direction="column">
         <Typography
           sx={{
             fontSize: "21px",
-            color: "#5044EB",
+            color: "primary.main",
             lineHeight: 1,
             fontWeight: "700",
           }}
@@ -77,7 +77,7 @@ export const AboutMeSec = () => {
           </Typography>
           <Typography
             variant="body1"
-            sx={{ fontSize: "18px", color: "#636D78", mt: 2 }}
+            sx={{ fontSize: "18px", color: "text.secondary", mt: 2 }}
           >
             Passionate MERN stack developer with expertise in building modern,
             responsive web applications. Specializing in React, Next.js, and

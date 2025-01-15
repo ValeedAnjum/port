@@ -1,4 +1,5 @@
 import { createTheme } from "@mui/material/styles";
+import { colors } from "./colors";
 
 declare module "@mui/material/Button" {
   interface ButtonPropsVariantOverrides {
@@ -10,21 +11,32 @@ export const theme = createTheme({
   typography: {
     fontFamily: "var(--font-albert-sans)",
   },
+
+  palette: {
+    primary: {
+      main: colors.primary,
+    },
+
+    text: {
+      primary: colors.textColor.primary,
+      secondary: colors.textColor.secondary,
+    },
+  },
   components: {
     MuiButton: {
       variants: [
         {
-          props: { variant: "main" }, // Custom variant name
+          props: { variant: "main" },
           style: {
-            position: "relative", // Required for ::after positioning
-            color: "#636D78",
+            position: "relative",
+            color: colors.textColor.secondary,
             fontSize: "14px",
             fontWeight: "600",
             backgroundColor: "transparent",
             borderRadius: 0,
             overflow: "hidden", // Ensure no overflow during animation
             "&:hover": {
-              color: "#5044EB", // Text color on hover
+              color: colors.primary, // Text color on hover
               backgroundColor: "transparent",
             },
             "&::after": {
@@ -34,7 +46,7 @@ export const theme = createTheme({
               left: "50%", // Start at the center
               width: "0%", // Initial width
               height: "2px", // Border height
-              backgroundColor: "#5044EB", // Border color
+              backgroundColor: colors.primary, // Border color
               transition: "all 0.5s ease", // Smooth transition
               transform: "translateX(-50%)", // Center alignment
             },
@@ -51,7 +63,7 @@ export const theme = createTheme({
             fontWeight: "bold",
             color: "white", // Ensures text remains visible
             borderRadius: "12px",
-            backgroundColor: "#5044EB", // Base background color
+            backgroundColor: colors.primary, // Base background color
             padding: "19px 36px",
             overflow: "hidden", // Prevents pseudo-element overflow
             zIndex: 1, // Keeps text above pseudo-element
@@ -70,7 +82,7 @@ export const theme = createTheme({
               top: "0%", // Moves the pseudo-element up to cover the button
             },
             "&:hover": {
-              backgroundColor: "#5044EB", // Keeps base background consistent
+              backgroundColor: colors.primary, // Keeps base background consistent
               color: "white", // Ensures text remains visible
             },
           },

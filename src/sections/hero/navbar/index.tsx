@@ -15,9 +15,9 @@ export default function Navbar() {
           <Typography
             variant="h6"
             sx={{
-              color: "#1f1f1f",
+              color: "text.primary",
               cursor: "pointer",
-              fontSize: "2em",
+              fontSize: "2rem",
               userSelect: "none",
             }}
           >

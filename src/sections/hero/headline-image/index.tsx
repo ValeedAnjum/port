@@ -44,7 +44,7 @@ const HeadlineImage = () => {
               <Typography
                 sx={{
                   textTransform: "uppercase",
-                  color: "#636D78",
+                  color: "text.secondary",
                   fontSize: "14px",
                   fontWeight: "600",
                 }}
@@ -59,7 +59,7 @@ const HeadlineImage = () => {
               </Typography>
               <Typography
                 variant="body1"
-                sx={{ fontSize: "18px", color: "#636D78", mt: 2 }}
+                sx={{ fontSize: "18px", color: "text.secondary", mt: 2 }}
               >
                 Specialized in building scalable frontend architectures and
                 full-stack solutions using the MERN ecosystem. Experienced in
@@ -75,11 +75,10 @@ const HeadlineImage = () => {
             item
             sm={6}
             sx={{
-              // border: "1px solid black",
               height: "80vh",
-              backgroundImage: "url(/assets//images/hero/hero-man-2.png)", // Correct path
-              backgroundSize: "cover", // Optional, adjust as needed
-              backgroundRepeat: "no-repeat", // Optional, adjust as needed
+              backgroundImage: "url(/assets//images/hero/hero-man-2.png)",
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
             }}
           />
         </Grid>
