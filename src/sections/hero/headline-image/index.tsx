@@ -76,7 +76,7 @@ const HeadlineImage = () => {
             sm={6}
             sx={{
               height: "80vh",
-              backgroundImage: "url(/assets//images/hero/hero-man-2.png)",
+              backgroundImage: "url(/port/assets//images/hero/hero-man-2.png)",
               backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
             }}
