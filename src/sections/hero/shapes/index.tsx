@@ -15,7 +15,7 @@ const Shapes = () => {
       <Box
         sx={{
           //   border: "1px solid red",
-          width: "50%",
+          width: { xs: "100%", md: "50%" },
           height: "100%",
           top: "0",
           left: "0",
@@ -67,6 +67,7 @@ const Shapes = () => {
       <Box
         sx={{
           //   border: "1px solid black",
+          display: { xs: "none", md: "block" },
           width: "50%",
           height: "100%",
           top: "0",

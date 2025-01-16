@@ -1,4 +1,4 @@
-import { createTheme } from "@mui/material/styles";
+import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 import { colors } from "./colors";
 
 declare module "@mui/material/Button" {
@@ -7,9 +7,12 @@ declare module "@mui/material/Button" {
     accent: true;
   }
 }
-export const theme = createTheme({
+const themeConfig = createTheme({
   typography: {
     fontFamily: "var(--font-albert-sans)",
+    h1: {
+      fontSize: "4.5rem",
+    },
   },
 
   palette: {
@@ -91,3 +94,5 @@ export const theme = createTheme({
     },
   },
 });
+
+export const theme = responsiveFontSizes(themeConfig);

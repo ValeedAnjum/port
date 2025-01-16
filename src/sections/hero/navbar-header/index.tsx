@@ -38,7 +38,7 @@ const IconWithText = ({ icon: Icon, text, ...rest }: IconTextProps) => {
 
 const NavbarHeader = () => {
   return (
-    <Stack direction="row" gap={4}>
+    <Stack direction="row" gap={{ sm: 0, md: 4 }}>
       <IconWithText
         icon={LocalPhoneIcon}
         text="+92 301 640 50 51"

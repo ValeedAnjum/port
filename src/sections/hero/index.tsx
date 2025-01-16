@@ -30,9 +30,11 @@ export const HeroSec = () => {
         <Grid container justifyContent="center">
           <Grid
             item
-            sm={9}
+            lg={9}
+            sm={12}
             sx={{
               // border: "1px solid red",
+              display: { xs: "none", md: "block" },
               p: 1,
             }}
           >
@@ -40,7 +42,8 @@ export const HeroSec = () => {
           </Grid>
           <Grid
             item
-            sm={9}
+            lg={9}
+            xs={12}
             sx={
               {
                 // border: "1px solid red",

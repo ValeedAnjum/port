@@ -2,7 +2,8 @@ import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import { Button, Stack, Typography } from "@mui/material";
+import FormatAlignJustifyIcon from "@mui/icons-material/FormatAlignJustify";
+import { Button, IconButton, Stack, Typography } from "@mui/material";
 
 export default function Navbar() {
   const goToAbout = () => {
@@ -10,10 +11,14 @@ export default function Navbar() {
     aboutSection?.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <Box sx={{ flexGrow: 1, m: 1 }}>
+    <Box sx={{ flexGrow: 1, m: { xs: 0, md: 1 } }}>
       <AppBar
         position="static"
-        sx={{ backgroundColor: "white", p: 2, borderRadius: "12px" }}
+        sx={{
+          backgroundColor: "white",
+          p: { xs: 0, md: 2 },
+          borderRadius: { xs: "0", md: "12px" },
+        }}
       >
         <Toolbar>
           <Typography
@@ -21,7 +26,7 @@ export default function Navbar() {
             sx={{
               color: "text.primary",
               cursor: "pointer",
-              fontSize: "2rem",
+              fontSize: { lg: "2rem" },
               userSelect: "none",
             }}
           >
@@ -34,21 +39,43 @@ export default function Navbar() {
               pl: 2,
             }}
           >
-            <Button variant="main" disableRipple onClick={goToAbout}>
-              About Me
-            </Button>
-            <Button variant="main" disableRipple>
-              Skills
-            </Button>
-            <Button variant="main" disableRipple>
-              Experince
-            </Button>
-            <Button variant="main" disableRipple>
-              Work
-            </Button>
+            <Box sx={{ display: { xs: "none", md: "block" } }}>
+              <Button variant="main" disableRipple onClick={goToAbout}>
+                About Me
+              </Button>
+              <Button variant="main" disableRipple>
+                Skills
+              </Button>
+              <Button variant="main" disableRipple>
+                Experince
+              </Button>
+              <Button variant="main" disableRipple>
+                Work
+              </Button>
+            </Box>
           </Stack>
           <Stack direction="row">
-            <Button variant="accent">Contact Me</Button>
+            <Button
+              variant="accent"
+              sx={{
+                display: {
+                  xs: "none",
+                  md: "block",
+                },
+              }}
+            >
+              Contact Me
+            </Button>
+            <IconButton
+              sx={{
+                display: {
+                  sm: "block",
+                  md: "none",
+                },
+              }}
+            >
+              <FormatAlignJustifyIcon />
+            </IconButton>
           </Stack>
         </Toolbar>
       </AppBar>
