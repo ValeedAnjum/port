@@ -1,11 +1,30 @@
-import * as React from "react";
+import { useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import FormatAlignJustifyIcon from "@mui/icons-material/FormatAlignJustify";
 import { Button, IconButton, Stack, Typography } from "@mui/material";
+import MobileNavbar from "./mobile-navbar";
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  // const toggleDrawer =
+  //   (anchor: Anchor, open: boolean) =>
+  //   (event: React.KeyboardEvent | React.MouseEvent) => {
+  //     if (
+  //       event.type === "keydown" &&
+  //       ((event as React.KeyboardEvent).key === "Tab" ||
+  //         (event as React.KeyboardEvent).key === "Shift")
+  //     ) {
+  //       return;
+  //     }
+
+  //     setIsOpen(open);
+  //   };
+  const toggleDrawer = (open: boolean) => {
+    setIsOpen(open);
+  };
   const goToAbout = () => {
     const aboutSection = document.getElementById("about-sec");
     aboutSection?.scrollIntoView({ behavior: "smooth" });
@@ -73,12 +92,14 @@ export default function Navbar() {
                   md: "none",
                 },
               }}
+              onClick={() => toggleDrawer(true)}
             >
               <FormatAlignJustifyIcon />
             </IconButton>
           </Stack>
         </Toolbar>
       </AppBar>
+      <MobileNavbar isOpen={isOpen} toggleDrawer={toggleDrawer} />
     </Box>
   );
 }
