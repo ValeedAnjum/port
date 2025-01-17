@@ -45,9 +45,16 @@ const AboutCard = ({
 };
 export const AboutMeSec = () => {
   return (
-    <Grid container justifyContent="center" id="about-sec" sx={{ mb: "20rem" }}>
-      <Grid item sm={9} sx={{ m: 1, p: 2 }} container>
-        <Grid item sm={6} sx={{ p: "2rem 2rem 0 0" }}>
+    <Grid container justifyContent="center" id="about-sec">
+      <Grid item md={9} sm={12} sx={{ m: { xs: 0, md: 1 }, p: 2 }} container>
+        <Grid
+          item
+          sm={6}
+          sx={{
+            p: { md: "2rem 2rem 0 0", xs: "0" },
+            display: { md: "block", xs: "none" },
+          }}
+        >
           <Box
             sx={{
               height: "80vh",
@@ -60,14 +67,19 @@ export const AboutMeSec = () => {
 
         <Grid
           item
-          sm={6}
+          md={6}
+          sm={12}
           container
           direction="column"
-          sx={{ p: "2rem 2rem 0 0" }}
+          sx={{ p: { md: "2rem 2rem 0 0", xs: "0" } }}
         >
           <Typography
             sx={{
-              fontSize: "52px",
+              fontSize: {
+                xl: "3.25rem",
+                lg: "2.25rem",
+                md: "1rem",
+              },
               fontWeight: "700",
               color: "#1f1f1f",
               lineHeight: 1,
@@ -77,7 +89,7 @@ export const AboutMeSec = () => {
           </Typography>
           <Typography
             variant="body1"
-            sx={{ fontSize: "18px", color: "text.secondary", mt: 2 }}
+            sx={{ fontSize: "1rem", color: "text.secondary", mt: 2 }}
           >
             Passionate MERN stack developer with expertise in building modern,
             responsive web applications. Specializing in React, Next.js, and
@@ -85,7 +97,11 @@ export const AboutMeSec = () => {
             user experiences with clean, maintainable code and optimal
             performance.
           </Typography>
-          <Stack direction="row" gap={4} sx={{ m: "1rem 0" }}>
+          <Stack
+            direction={{ md: "row", xs: "column" }}
+            gap={4}
+            sx={{ m: "1rem 0" }}
+          >
             <Stack direction="row">
               <AboutCard
                 icon={WebIcon}

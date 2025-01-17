@@ -40,9 +40,7 @@ const Headings = () => {
         sx={{
           fontSize: {
             lg: "1.125",
-            md: "1rem",
-            sm: "0.8rem",
-            xs: "0.64rem",
+            xs: "1rem",
           },
           color: "text.secondary",
           mt: 2,
