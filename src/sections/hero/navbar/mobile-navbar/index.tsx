@@ -19,12 +19,22 @@ const MobileNavbar = ({ isOpen, toggleDrawer }: MobileNavbarPorps) => {
         <List sx={{ width: "260px", p: "0" }}>
           <ListItemButton sx={{ p: "0", borderBottom: "1px solid #00000021" }}>
             <ListItem>
-              <ListItemText primary="Home" />
+              <ListItemText primary="ABOUT ME" />
             </ListItem>
           </ListItemButton>
           <ListItemButton sx={{ p: "0", borderBottom: "1px solid #00000021" }}>
             <ListItem>
-              <ListItemText primary="Home" />
+              <ListItemText primary="SKILLS" />
+            </ListItem>
+          </ListItemButton>
+          <ListItemButton sx={{ p: "0", borderBottom: "1px solid #00000021" }}>
+            <ListItem>
+              <ListItemText primary="EXPERINCE" />
+            </ListItem>
+          </ListItemButton>
+          <ListItemButton sx={{ p: "0", borderBottom: "1px solid #00000021" }}>
+            <ListItem>
+              <ListItemText primary="WORK" />
             </ListItem>
           </ListItemButton>
         </List>

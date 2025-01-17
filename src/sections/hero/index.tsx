@@ -5,13 +5,14 @@ import Shapes from "./shapes";
 import NavbarHeader from "./navbar-header";
 import Navbar from "./navbar";
 import HeadlineImage from "./headline-image";
+import Headings from "./headline-image/headings";
 
 export const HeroSec = () => {
   return (
     <Grid
       container
       sx={{
-        height: "100vh",
+        height: { sm: "auto", md: "100vh" },
         width: "100%",
         position: "relative",
         overflow: "hidden",
@@ -51,6 +52,9 @@ export const HeroSec = () => {
             }
           >
             <Navbar />
+            <Box sx={{ display: { sm: "block", md: "none" }, p: 2 }}>
+              <Headings />
+            </Box>
           </Grid>
         </Grid>
       </Box>

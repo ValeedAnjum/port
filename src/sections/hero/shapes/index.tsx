@@ -40,6 +40,7 @@ const Shapes = () => {
         {/* a big circle in the bottom  */}
         <Box
           sx={{
+            display: { xs: "none", md: "block" },
             position: "absolute",
             left: "10%",
             width: "360px",
