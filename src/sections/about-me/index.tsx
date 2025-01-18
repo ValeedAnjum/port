@@ -58,9 +58,9 @@ export const AboutMeSec = () => {
           <Box
             sx={{
               height: "80vh",
-              backgroundImage: "url(/port/assets//images/about/about.png)", // Correct path
-              backgroundSize: "cover", // Optional, adjust as needed
-              backgroundRepeat: "no-repeat", // Optional, adjust as needed
+              backgroundImage: "url(/port/assets//images/about/about.png)",
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
             }}
           />
         </Grid>
