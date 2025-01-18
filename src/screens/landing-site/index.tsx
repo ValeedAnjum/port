@@ -1,4 +1,4 @@
-import { AboutMeSec, ExperianceSec, HeroSec } from "@/sections";
+import { AboutMeSec, ExperianceSec, HeroSec, SkillSec } from "@/sections";
 
 export const LandingSiteScreen = () => {
   return (
@@ -6,6 +6,7 @@ export const LandingSiteScreen = () => {
       <HeroSec />
       <AboutMeSec />
       <ExperianceSec />
+      <SkillSec />
     </>
   );
 };

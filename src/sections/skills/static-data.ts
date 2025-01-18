@@ -1,0 +1,25 @@
+export const skills = [
+  {
+    name: "HTML",
+    level: 90,
+  },
+  {
+    name: "CSS",
+    level: 90,
+  },
+  { name: "JavaScript", level: 98 },
+  { name: "React", level: 90 },
+  { name: "NextJs", level: 90 },
+  { name: "Node", level: 70 },
+  { name: "ExpressJs", level: 70 },
+  { name: "MongoDB", level: 80 },
+  { name: "Material UI", level: 95 },
+  { name: "Redux", level: 95 },
+  { name: "RTK Query", level: 95 },
+  { name: "React Hook Form", level: 90 },
+  { name: "TypeScript", level: 85 },
+  { name: "Git", level: 85 },
+  { name: "Yup", level: 90 },
+  { name: "Docker", level: 70 },
+  { name: "Zod", level: 90 },
+];
