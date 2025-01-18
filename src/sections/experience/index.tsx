@@ -139,6 +139,12 @@ export const ExperianceSec = () => {
       sx={{ p: { xs: 2 } }}
       justifyContent={{ xs: "flex-start", md: "center" }}
     >
+      <Typography
+        variant="h1"
+        sx={{ color: "text.primary", textAlign: "center", pb: 2 }}
+      >
+        Professional Experience
+      </Typography>
       <Box
         sx={{
           //   border: "1px solid red",

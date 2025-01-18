@@ -16,8 +16,8 @@ const CircularProgressBorder = ({
     <Stack>
       <Box
         sx={{
-          width: "150px",
-          height: "150px",
+          width: { xs: "80px", sm: "150px" },
+          height: { xs: "80px", sm: "150px" },
           borderRadius: "50%",
           background: `conic-gradient(${color} ${percentage}%, transparent ${percentage}%)`,
           position: "relative",
@@ -29,8 +29,8 @@ const CircularProgressBorder = ({
       >
         <Box
           sx={{
-            width: "120px", // Inner circle width (adjust for thickness)
-            height: "120px", // Inner circle height
+            width: { xs: "70px", sm: "120px" },
+            height: { xs: "70px", sm: "120px" },
             borderRadius: "50%",
             background: "white", // Inner circle background
             display: "flex",
@@ -50,6 +50,7 @@ const CircularProgressBorder = ({
           mt: 2,
           fontWeight: "bold",
           color: "text.primary",
+          fontSize: { xs: "0.8rem", md: "1rem" },
         }}
       >
         {skillName}
@@ -59,11 +60,6 @@ const CircularProgressBorder = ({
 };
 
 export const SkillSec = () => {
-  function generateRandomColor() {
-    return `#${Math.floor(Math.random() * 16777215)
-      .toString(16)
-      .padStart(6, "0")}`;
-  }
   return (
     <Grid
       container
@@ -73,18 +69,26 @@ export const SkillSec = () => {
       <Grid item md={9} sm={12}>
         <Typography
           variant="h1"
-          sx={{ color: "text.primary", textAlign: "center" }}
+          sx={{ color: "text.primary", textAlign: "center", pb: 2 }}
         >
           Professional Skills
         </Typography>
-        <Stack direction="row" gap={1} sx={{ flexWrap: "wrap" }}>
-          {skills.map(({ name, level }, index) => (
+        <Stack
+          direction="row"
+          gap={1}
+          sx={{
+            flexWrap: "wrap",
+            // border: "1px solid red",
+            justifyContent: "center",
+          }}
+        >
+          {skills.map(({ name, level, color }, index) => (
             <CircularProgressBorder
               key={index}
               percentage={level}
               label={`${level}%`}
               skillName={name}
-              color={generateRandomColor()}
+              color={color}
             />
           ))}
         </Stack>
