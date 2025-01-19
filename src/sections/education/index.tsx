@@ -64,6 +64,7 @@ export const EducationSec = () => {
       container
       sx={{ p: { xs: 2 }, backgroundColor: "hsl(0, 0%, 90%)" }}
       justifyContent={{ xs: "flex-start", md: "center" }}
+      id="education-sec"
     >
       <Grid
         item

@@ -165,6 +165,7 @@ export const WorkSec = () => {
       container
       sx={{ p: { xs: 2 } }}
       justifyContent={{ xs: "flex-start", md: "center" }}
+      id="work-sec"
     >
       <Typography
         variant="h1"

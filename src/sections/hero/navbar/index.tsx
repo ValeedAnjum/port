@@ -5,30 +5,21 @@ import Toolbar from "@mui/material/Toolbar";
 import FormatAlignJustifyIcon from "@mui/icons-material/FormatAlignJustify";
 import { Button, IconButton, Stack, Typography } from "@mui/material";
 import MobileNavbar from "./mobile-navbar";
+import useScroll from "@/hooks";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
-  // const toggleDrawer =
-  //   (anchor: Anchor, open: boolean) =>
-  //   (event: React.KeyboardEvent | React.MouseEvent) => {
-  //     if (
-  //       event.type === "keydown" &&
-  //       ((event as React.KeyboardEvent).key === "Tab" ||
-  //         (event as React.KeyboardEvent).key === "Shift")
-  //     ) {
-  //       return;
-  //     }
-
-  //     setIsOpen(open);
-  //   };
+  const {
+    scrollToAboutSec,
+    scrollToExperienceSec,
+    scrollToSkillsSec,
+    scrollToWorkSec,
+    scrollToEduSec,
+  } = useScroll();
   const toggleDrawer = (open: boolean) => {
     setIsOpen(open);
   };
-  const goToAbout = () => {
-    const aboutSection = document.getElementById("about-sec");
-    aboutSection?.scrollIntoView({ behavior: "smooth" });
-  };
+
   return (
     <Box sx={{ flexGrow: 1, m: { xs: 0, md: 1 } }}>
       <AppBar
@@ -59,17 +50,24 @@ export default function Navbar() {
             }}
           >
             <Box sx={{ display: { xs: "none", md: "block" } }}>
-              <Button variant="main" disableRipple onClick={goToAbout}>
+              <Button variant="main" disableRipple onClick={scrollToAboutSec}>
                 About Me
               </Button>
-              <Button variant="main" disableRipple>
-                Skills
-              </Button>
-              <Button variant="main" disableRipple>
+              <Button
+                variant="main"
+                disableRipple
+                onClick={scrollToExperienceSec}
+              >
                 Experince
               </Button>
-              <Button variant="main" disableRipple>
+              <Button variant="main" disableRipple onClick={scrollToSkillsSec}>
+                Skills
+              </Button>
+              <Button variant="main" disableRipple onClick={scrollToWorkSec}>
                 Work
+              </Button>
+              <Button variant="main" disableRipple onClick={scrollToEduSec}>
+                Education
               </Button>
             </Box>
           </Stack>

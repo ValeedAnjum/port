@@ -65,6 +65,7 @@ export const SkillSec = () => {
       container
       sx={{ p: { xs: 2 } }}
       justifyContent={{ xs: "flex-start", md: "center" }}
+      id="skills-sec"
     >
       <Grid item md={9} sm={12}>
         <Typography

@@ -138,6 +138,7 @@ export const ExperianceSec = () => {
       container
       sx={{ p: { xs: 2 } }}
       justifyContent={{ xs: "flex-start", md: "center" }}
+      id="experience-sec"
     >
       <Typography
         variant="h1"
