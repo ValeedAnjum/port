@@ -20,7 +20,7 @@ const Shapes = () => {
           top: "0",
           left: "0",
           position: "absolute",
-          backgroundImage: "url(/port/assets//images/hero/hero-left-bg-1.png)", // Correct path
+          backgroundImage: "url(/assets//images/hero/hero-left-bg-1.png)", // Correct path
           backgroundSize: "cover", // Optional, adjust as needed
           backgroundRepeat: "no-repeat", // Optional, adjust as needed
         }}
@@ -74,7 +74,7 @@ const Shapes = () => {
           top: "0",
           right: "0",
           position: "absolute",
-          backgroundImage: "url(/port/assets//images/hero/hero-right-bg-2.png)", // Correct path
+          backgroundImage: "url(/assets//images/hero/hero-right-bg-2.png)", // Correct path
           backgroundSize: "cover", // Optional, adjust as needed
           backgroundRepeat: "no-repeat", // Optional, adjust as needed
         }}

@@ -49,7 +49,7 @@ const HeadlineImage = ({
             sx={{
               display: { xs: "none", sm: "block" },
               height: "80vh",
-              backgroundImage: "url(/port/assets//images/hero/hero-man-2.png)",
+              backgroundImage: "url(/assets//images/hero/hero-man-2.png)",
               backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "bottom",
