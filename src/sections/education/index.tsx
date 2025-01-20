@@ -117,11 +117,8 @@ export const EducationSec = () => {
             <PrimaryDurationHeading text="2 Years" />
           </Box>
           <Box sx={{ display: "flex", alignItems: "baseline" }}>
-            <SecondaryDegreeHeading
-              text="Khwaja Fareed University of Engineering & Information Technology
-              (KFUEIT)"
-            />
-            <SecondaryDurationHeading text="2017 - 2021" />
+            <SecondaryDegreeHeading text="Punjab College Liaquatpur" />
+            <SecondaryDurationHeading text="2014 - 2016" />
           </Box>
         </Stack>
         <Stack
@@ -138,11 +135,8 @@ export const EducationSec = () => {
             <PrimaryDurationHeading text="2 Years" />
           </Box>
           <Box sx={{ display: "flex", alignItems: "baseline" }}>
-            <SecondaryDegreeHeading
-              text="Khwaja Fareed University of Engineering & Information Technology
-              (KFUEIT)"
-            />
-            <SecondaryDurationHeading text="2017 - 2021" />
+            <SecondaryDegreeHeading text="Govt Higher Secondary School Khan Bela" />
+            <SecondaryDurationHeading text="2010 - 2012" />
           </Box>
         </Stack>
       </Grid>
