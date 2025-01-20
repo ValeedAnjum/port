@@ -26,7 +26,7 @@ const Headings = ({ openMeatingModel }: { openMeatingModel: () => void }) => {
           fontWeight: 700,
           fontSize: {
             xl: "4.5rem",
-            lg: "3.5rem",
+            lg: "2.5rem",
             md: "1.5rem",
             sm: "1.2rem",
           },
