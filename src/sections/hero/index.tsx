@@ -4,10 +4,9 @@ import { Box, Grid } from "@mui/material";
 import Shapes from "./shapes";
 import NavbarHeader from "./navbar-header";
 import Navbar from "./navbar";
-import HeadlineImage from "./headline-image";
-import Headings from "./headline-image/headings";
 import { CalendlyPopup } from "./calendly/calendly";
 import { useHero } from "./use-hero";
+import Headings from "./headline-image/headings";
 
 export const HeroSec = () => {
   const { meatingModel, openMeatingModel, closeMeatingModel } = useHero();
@@ -60,14 +59,34 @@ export const HeroSec = () => {
               }
             >
               <Navbar openMeatingModel={openMeatingModel} />
-              <Box sx={{ display: { sm: "block", md: "none" }, p: 2 }}>
+              <Box
+                sx={{
+                  // border: "1px solid red",
+                  p: 2,
+                  width: { sm: "100%", md: "50%" },
+                }}
+              >
                 <Headings openMeatingModel={openMeatingModel} />
               </Box>
             </Grid>
           </Grid>
         </Box>
-        {/* Hero Text and Image */}
-        <HeadlineImage openMeatingModel={openMeatingModel} />
+
+        <Box
+          sx={{
+            display: { xs: "none", sm: "block" },
+            position: "absolute",
+            bottom: "0",
+            left: "55%",
+            width: "30%",
+            height: "70vh",
+            backgroundImage: "url(/port/assets//images/hero/hero-man-2.png)",
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "bottom",
+            // height: "600px",
+          }}
+        />
       </Grid>
     </>
   );
