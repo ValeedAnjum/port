@@ -2,7 +2,11 @@ import { Box, Grid } from "@mui/material";
 import React from "react";
 import Headings from "./headings";
 
-const HeadlineImage = () => {
+const HeadlineImage = ({
+  openMeatingModel,
+}: {
+  openMeatingModel: () => void;
+}) => {
   return (
     <Box
       sx={{
@@ -37,7 +41,7 @@ const HeadlineImage = () => {
               flexDirection: "column",
             }}
           >
-            <Headings />
+            <Headings openMeatingModel={openMeatingModel} />
           </Grid>
           <Grid
             item

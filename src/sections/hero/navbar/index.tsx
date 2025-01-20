@@ -7,7 +7,11 @@ import { Button, IconButton, Stack, Typography } from "@mui/material";
 import MobileNavbar from "./mobile-navbar";
 import useScroll from "@/hooks";
 
-export default function Navbar() {
+export default function Navbar({
+  openMeatingModel,
+}: {
+  openMeatingModel: () => void;
+}) {
   const [isOpen, setIsOpen] = useState(false);
   const {
     scrollToAboutSec,
@@ -80,8 +84,9 @@ export default function Navbar() {
                   md: "block",
                 },
               }}
+              onClick={openMeatingModel}
             >
-              Contact Me
+              Contact
             </Button>
             <IconButton
               sx={{

@@ -1,7 +1,7 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
 import React from "react";
 
-const Headings = () => {
+const Headings = ({ openMeatingModel }: { openMeatingModel: () => void }) => {
   return (
     <Box
       sx={
@@ -52,7 +52,9 @@ const Headings = () => {
         for enterprise-level applications.
       </Typography>
       <Stack direction="row" sx={{ mt: 2 }} gap={1}>
-        <Button variant="accent">Download My Cv</Button>
+        <Button variant="accent" onClick={openMeatingModel}>
+          Schedule a Meeting
+        </Button>
       </Stack>
     </Box>
   );

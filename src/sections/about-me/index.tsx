@@ -125,7 +125,13 @@ export const AboutMeSec = () => {
             />
           </Stack>
           <Stack direction="row" sx={{ mt: 2 }}>
-            <Button variant="accent">Download CV</Button>
+            <Button
+              variant="accent"
+              href="https://www.linkedin.com/in/valeedanjum/"
+              target="_blank"
+            >
+              Linked - In
+            </Button>
           </Stack>
         </Grid>
       </Grid>
