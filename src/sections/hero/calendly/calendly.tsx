@@ -39,7 +39,7 @@ export const CalendlyPopup = ({
             transform: "translate(-50%,-50%)",
             zIndex: 10,
             p: 1,
-            overflow: "scroll",
+            // overflow: "scroll",
           }}
         >
           <InlineWidget url="https://calendly.com/valeedanjumsiddiqui/meeting" />
