@@ -58,7 +58,7 @@ export const AboutMeSec = () => {
           <Box
             sx={{
               height: "80vh",
-              backgroundImage: "url(/port/assets//images/about/about.png)",
+              backgroundImage: "url(/port/assets//images/hero/hero-man-3.png)",
               backgroundSize: "contain",
               backgroundRepeat: "no-repeat",
             }}

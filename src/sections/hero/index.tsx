@@ -80,7 +80,7 @@ export const HeroSec = () => {
             left: "55%",
             width: "30%",
             height: "70vh",
-            backgroundImage: "url(/port/assets//images/hero/hero-man-2.png)",
+            backgroundImage: "url(/port/assets//images/hero/hero-man-3.png)",
             backgroundSize: "contain",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "bottom",
