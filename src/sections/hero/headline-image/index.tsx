@@ -1,64 +1,63 @@
-import { Box, Grid } from "@mui/material";
+import { Box, Button, Stack, Typography } from "@mui/material";
 import React from "react";
-import Headings from "./headings";
 
-const HeadlineImage = ({
-  openMeatingModel,
-}: {
-  openMeatingModel: () => void;
-}) => {
+const Headings = ({ openMeatingModel }: { openMeatingModel: () => void }) => {
   return (
     <Box
-      sx={{
-        position: "absolute",
-        bottom: 0,
-        width: "100%",
-        zIndex: 1,
-        p: "0 1rem",
-        m: "0 1rem",
-        display: { xs: "none", md: "block" },
-      }}
+      sx={
+        {
+          // border: "1px solid red",
+        }
+      }
     >
-      <Grid container justifyContent="center">
-        <Grid
-          item
-          lg={9}
-          sm={12}
-          sx={
-            {
-              // border: "1px solid blue",
-            }
-          }
-          container
-        >
-          <Grid
-            item
-            sm={6}
-            xs={12}
-            sx={{
-              // border: "1px solid black",
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            <Headings openMeatingModel={openMeatingModel} />
-          </Grid>
-          <Grid
-            item
-            sm={6}
-            sx={{
-              display: { xs: "none", sm: "block" },
-              height: "80vh",
-              backgroundImage: "url(/assets//images/hero/hero-man-2.png)",
-              backgroundSize: "contain",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "bottom",
-            }}
-          />
-        </Grid>
-      </Grid>
+      <Typography
+        sx={{
+          textTransform: "uppercase",
+          color: "text.secondary",
+          fontSize: "14px",
+          fontWeight: "600",
+        }}
+      >
+        FRONTEND ARCHITECT
+      </Typography>
+      <Typography
+        variant="h1"
+        sx={{
+          fontWeight: 700,
+          fontSize: {
+            xl: "4.5rem",
+            lg: "2.5rem",
+            md: "1.5rem",
+            sm: "1.2rem",
+          },
+          color: "text.primary",
+        }}
+      >
+        Full-Stack Development & System Architecture
+      </Typography>
+      <Typography
+        variant="body1"
+        sx={{
+          fontSize: {
+            lg: "1.125",
+            xs: "1rem",
+          },
+          color: "text.secondary",
+          mt: 2,
+        }}
+      >
+        Specialized in building scalable frontend architectures and full-stack
+        solutions using the MERN ecosystem. Experienced in designing robust
+        component systems, state management patterns, and frontend architectures
+        for enterprise-level applications.
+      </Typography>
+      <Stack direction="row" sx={{ mt: 2 }} gap={1}>
+        <Button variant="accent" onClick={openMeatingModel}>
+          Schedule a Meeting
+        </Button>
+      </Stack>
     </Box>
   );
 };
 
-export default HeadlineImage;
+export default Headings;

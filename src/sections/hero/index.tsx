@@ -6,7 +6,7 @@ import NavbarHeader from "./navbar-header";
 import Navbar from "./navbar";
 import { CalendlyPopup } from "./calendly/calendly";
 import { useHero } from "./use-hero";
-import Headings from "./headline-image/headings";
+import Headings from "./headline-image";
 
 export const HeroSec = () => {
   const { meatingModel, openMeatingModel, closeMeatingModel } = useHero();
