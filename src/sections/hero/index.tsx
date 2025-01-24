@@ -7,6 +7,7 @@ import Navbar from "./navbar";
 import { CalendlyPopup } from "./calendly/calendly";
 import { useHero } from "./use-hero";
 import Headings from "./headline-image/headings";
+import Image from "next/image";
 
 export const HeroSec = () => {
   const { meatingModel, openMeatingModel, closeMeatingModel } = useHero();
@@ -80,13 +81,16 @@ export const HeroSec = () => {
             left: "55%",
             width: "30%",
             height: "70vh",
-            backgroundImage: "url(/assets//images/hero/hero-man-3.png)",
-            backgroundSize: "contain",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "bottom",
-            // height: "600px",
           }}
-        />
+        >
+          <Image
+            src="/assets//images/hero/hero-man-3.png"
+            alt="Hero Image"
+            layout="fill"
+            objectFit="contain" // Ensures the image behaves like backgroundSize: "contain"
+            objectPosition="bottom" // Matches backgroundPosition: "bottom"
+          />
+        </Box>
       </Grid>
     </>
   );
