@@ -168,7 +168,7 @@ export const ExperianceSec = () => {
         />
         {/* Right */}
         <RightPanel color="#42b853">
-          <PrimaryTitle text="Software Engineer" />
+          <PrimaryTitle text="Founder & Software Engineer" />
           <SecondaryTitle text="GenEdu. (Islamabad, PK)" />
           <SecondaryTitle text="Aug 2024 – Present" />
           <PrimaryList>
